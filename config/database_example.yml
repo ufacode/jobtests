@@ -1,0 +1,24 @@
+default: &default
+  adapter: mysql2
+  encoding: utf8
+  pool: 5
+  username: root
+  password:
+  socket: 'path to your MySQL socket'
+
+development:
+  <<: *default
+  database: jobtests_development
+
+
+test:
+  <<: *default
+  database: jobtests_test
+
+
+
+production:
+  <<: *default
+  database: jobtests_production
+  username: jobtests
+  password: <%= ENV['JOBTESTS_DATABASE_PASSWORD'] %>
