@@ -12,6 +12,9 @@ gem 'uglifier', '>= 1.3.0'
 # addons
 gem 'puma',     require: false
 gem 'sorcery',    '~> 0.9.1'
+gem 'bootstrap-sass', '~> 3.3.5'
+gem 'kaminari'               # pagination
+gem 'rails-i18n', '~> 4.0.0' # i18n messages
 
 group :development do
   gem 'better_errors'
@@ -19,6 +22,7 @@ group :development do
   gem 'bullet'
   gem 'quiet_assets'
   gem 'sextant'
+  gem 'bootstrap-generators', '~> 3.3.4'
 end
 
 group :production do

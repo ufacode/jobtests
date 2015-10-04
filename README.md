@@ -1,6 +1,9 @@
 JobTests
 --------
-тестовые задания для ИТишников, работа и обсуждение
+
+[ ![Codeship Status for ufacode/jobtests](https://codeship.com/projects/339933f0-4cae-0133-3283-7691bbba1d6d/status?branch=master)](https://codeship.com/projects/106428)
+
+IT job tests storage, community, discussion, ratings
 
 - тестовые задания (выложить, просмотреть, найти)
 - комментарии (добавить, ответить, рейтинг)
