@@ -1,5 +1,12 @@
 ru:
   posts:
+    index:
+      title: Список тестовых заданий
+      add: Добавить
+      read_more: Читать подробнее
+      edit: Редактировать
+      delete: Удалить
+      delete_confirm: Вы точно хотите удалить?
     create:
       success: Спасибо, ваш пост добавлен.
     update:
