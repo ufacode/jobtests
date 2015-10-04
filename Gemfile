@@ -30,7 +30,7 @@ group :test do
   gem 'capybara'
   gem 'capybara-screenshot'
   gem 'database_cleaner'
-  gem 'fabrication'
+  gem 'factory_girl_rails', '~> 4.0'
   gem 'faker'
   gem 'launchy',     '~> 2.4.3'
   gem 'poltergeist', '~> 1.6.0'
