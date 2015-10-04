@@ -1,0 +1,18 @@
+ru:
+  posts:
+    create:
+      success: Спасибо, ваш пост добавлен.
+    update:
+      success: Ваш пост удачно обновлен.
+    destroy:
+      success: Вы удалили ваш пост.
+  activerecord:
+    errors:
+      models:
+        post:
+          attributes:
+            title:
+              blank: Вы забыли указать обязательный заголовок
+              too_long: Слишком длинный заголовок, должно быть максимально %{count} символов
+            description:
+              blank: Вы забыли указать обязательное описание
