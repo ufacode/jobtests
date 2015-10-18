@@ -1,14 +1,33 @@
-<p id="notice"><%= notice %></p>
+<div class="col-lg-8">
+  <div class="blog-post">
+    <h2><%= post.title %></h2>
 
-<p>
-  <strong>Title:</strong>
-  <%= post.title %>
-</p>
+    <div class="postmetadata">
+      <ul>
+        <li>
+          <i class="icon-user"></i> <a href="#">Author Name</a>
+        </li>
 
-<p>
-  <strong>Description:</strong>
-  <%= post.description %>
-</p>
+        <li>
+          <i class="icon-calendar"></i>September 20th, 2013
+        </li>
 
-<%= link_to 'Edit', edit_post_path(post) %> |
-<%= link_to 'Back', posts_path %>
+        <li>
+          <i class="icon-comment"></i> <a href="#">100 Comments</a>
+        </li>
+        <li>
+          <i class="icon-tags"></i> <a href="#">Themes</a>, <a href="#">Template</a>
+        </li>
+      </ul>
+    </div>
+
+
+    <%= image_tag 'img1-870x400.jpeg', class: 'img-responsive' %>
+
+    <%= simple_format post.description %>
+
+  </div>
+
+</div>
+
+<%= render 'shared/sidebar' %>

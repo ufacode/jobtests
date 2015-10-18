@@ -7,6 +7,10 @@ ru:
       edit: Редактировать
       delete: Удалить
       delete_confirm: Вы точно хотите удалить?
+    new:
+      title: Добавить тестовое задание
+    edit:
+      title: Редактировать тестовое задание
     create:
       success: Спасибо, ваш пост добавлен.
     update:
@@ -23,3 +27,13 @@ ru:
               too_long: Слишком длинный заголовок, должно быть максимально %{count} символов
             description:
               blank: Вы забыли указать обязательное описание
+    attributes:
+      post:
+        title: Заголовок
+        description: Описание тестового задания
+  helpers:
+    submit:
+      post:
+        create: Добавить тестовое
+        update: Обновить тестовое
+        submit: Обновить тестовое
