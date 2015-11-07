@@ -1,29 +1,46 @@
-<p id="notice"><%= notice %></p>
+<% title t('.title')  %>
 
-<h1>Listing Posts</h1>
+<div class="col-lg-8">
+  <%= link_to t('.add'), new_post_path, class: 'btn btn-success' %>
 
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Description</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+  <% posts.newests.each do |post| %>
 
-  <tbody>
-    <% posts.each do |post| %>
-      <tr>
-        <td><%= post.title %></td>
-        <td><%= post.description %></td>
-        <td><%= link_to 'Show', post %></td>
-        <td><%= link_to 'Edit', edit_post_path(post) %></td>
-        <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+    <div class="blog-post">
+      <h2><%= link_to post.title, post_path(post, format: :html) %></h2>
 
-<br>
+      <div class="postmetadata">
+        <ul>
+          <li>
+            <i class="icon-user"></i> <a href="#">Author Name</a>
+          </li>
 
-<%= link_to 'New Post', new_post_path %>
+          <li>
+            <i class="icon-calendar"></i> <%= l post.created_at, format: :short %>
+          </li>
+
+          <li>
+            <i class="icon-comment"></i> <a href="#">100 Comments</a>
+          </li>
+          <li>
+            <i class="icon-tags"></i> <a href="#">Themes</a>, <a href="#">Template</a>
+          </li>
+        </ul>
+      </div>
+
+      <%= image_tag 'img1-870x400.jpeg', class: 'img-responsive' %>
+
+      <p><%= truncate post.description %></p>
+
+      <%= link_to t('.read_more'), post_path(post), class: 'btn btn-default btn-sm' %>
+      <%= render 'controls', post: post %>
+
+    </div>
+  <% end %>
+
+
+  <div class="pagination">
+    <%= paginate posts %>
+  </div>
+</div>
+
+<%= render 'shared/sidebar' %>

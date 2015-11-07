@@ -10,8 +10,8 @@ gem 'turbolinks'
 gem 'uglifier', '>= 1.3.0'
 
 # addons
-gem 'puma',     require: false
-gem 'sorcery',    '~> 0.9.1'
+gem 'puma', require: false
+gem 'sorcery', '~> 0.9.1'
 gem 'bootstrap-sass', '~> 3.3.5'
 gem 'kaminari'               # pagination
 gem 'rails-i18n', '~> 4.0.0' # i18n messages

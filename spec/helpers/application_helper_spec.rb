@@ -45,4 +45,19 @@ RSpec.describe ApplicationHelper, type: :helper do
       it { is_expected.to include 'alert-danger' }
     end
   end
+
+  describe '.title' do
+    before { @view_flow = ActionView::OutputFlow.new }
+    it 'yield title' do
+      text = 'Hello'
+      title(text)
+      expect(helper.content_for(:title)).to eq text
+    end
+
+    it 'strip tags' do
+      text = '<p>Hello <br/>World!</p>'
+      title(text)
+      expect(helper.content_for(:title)).to eq 'Hello World!'
+    end
+  end
 end

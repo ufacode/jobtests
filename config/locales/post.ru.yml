@@ -1,11 +1,23 @@
 ru:
   posts:
+    index:
+      title: Список тестовых заданий
+      add: Добавить
+      read_more: Читать подробнее
+    new:
+      title: Добавить тестовое задание
+    edit:
+      title: Редактировать тестовое задание
     create:
       success: Спасибо, ваш пост добавлен.
     update:
       success: Ваш пост удачно обновлен.
     destroy:
       success: Вы удалили ваш пост.
+    controls:
+      edit: Редактировать
+      delete: Удалить
+      delete_confirm: Вы точно хотите удалить?
   activerecord:
     errors:
       models:
@@ -16,3 +28,13 @@ ru:
               too_long: Слишком длинный заголовок, должно быть максимально %{count} символов
             description:
               blank: Вы забыли указать обязательное описание
+    attributes:
+      post:
+        title: Заголовок
+        description: Описание тестового задания
+  helpers:
+    submit:
+      post:
+        create: Добавить тестовое
+        update: Обновить тестовое
+        submit: Обновить тестовое

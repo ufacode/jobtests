@@ -24,4 +24,8 @@ module ApplicationHelper
     end
     html.html_safe
   end
+
+  def title(title)
+    content_for :title, strip_tags(title)
+  end
 end
