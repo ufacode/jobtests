@@ -19,10 +19,15 @@ Install:
 ## Setup environment variables
 
 ```
+SECRET_TOKEN = YOURSECRETTOKEN
 SECRET_KEY_BASE = YOURSECRETKEYGOESHERE
 APPLICATION_URL = http://domain.com:port
 MAIL_FROM = user@domain.com
-MAIL_SERVER_URL = protocol://user:password@domain:port?domain=domain.com&authentication=plain&starttls_auto=true # as 
+MAIL_SERVER_URL = protocol://user:password@domain:port?domain=domain.com&authentication=plain&starttls_auto=true # as
+
+GITHUB_KEY = ... 
+GITHUB_SECRET = ...
+ 
 ```
 
 ## Setup database

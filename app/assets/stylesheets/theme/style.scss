@@ -1,6 +1,9 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+@import "font-awesome-sprockets";
+@import "font-awesome";
+
 /*
 Global
 ============================= */
@@ -59,7 +62,7 @@ h4 {
   font-weight: 400
 }
 
-/* 
+/*
 HEADER ROW STYLE
 ===========================*/
 #header-row {

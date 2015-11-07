@@ -1,0 +1,8 @@
+ru:
+  shared:
+    header:
+      main: Главная
+      vacancies: Вакансии
+    current_user:
+      login: Войти
+      register: Зарегистрироваться

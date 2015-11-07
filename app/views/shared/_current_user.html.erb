@@ -1,0 +1,11 @@
+<% if user_signed_in? %>
+  <li><%= current_user.full_name %></li>
+<% else %>
+  <li><%= link_to t('.login'), new_user_session_path %></li>
+  <li><%= link_to t('.register'), new_user_registration_path %></li>
+  <li>
+    <%= link_to user_omniauth_authorize_path(:github) do %>
+      <span class="fa fa-github"></span> Github
+    <% end %>
+  </li>
+<% end %>
