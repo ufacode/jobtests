@@ -1,15 +1,8 @@
-class SessionsController < ApplicationController
+class SessionsController < Devise::OmniauthCallbacksController
   def create
-    auth = request.env['omniauth.auth']
-    puts '--------'
-    pp auth
-    # Find an identity here
     @identity = Identity.find_with_omniauth(auth)
 
-    if @identity.nil?
-      # If no identity was found, create a brand new one here
-      @identity = Identity.create_with_omniauth(auth)
-    end
+    @identity = Identity.create_with_omniauth(auth) if @identity.nil?
 
     if user_signed_in?
       if @identity.user == current_user
@@ -33,13 +26,17 @@ class SessionsController < ApplicationController
         redirect_to root_url, notice: t('.signed')
       else
         # No user associated with the identity so we need to create a new one
-        redirect_to new_user_url, notice: t('.continue')
+        # redirect_to new_user_url, notice: t('.continue')
+        @identity.user = User.create_with_omniauth(auth['info'])
+        sign_in_and_redirect(@identity.user)
       end
     end
   end
+  alias_method :github, :create
 
-  def destroy
-    session[:user_id] = nil
-    redirect_to root_url, notice: t('.signed_out')
+  private
+
+  def auth
+    @auth ||= request.env['omniauth.auth']
   end
 end

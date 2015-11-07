@@ -4,5 +4,6 @@ ru:
       main: Главная
       vacancies: Вакансии
     current_user:
+      sign_out: Выйти
       login: Войти
       register: Зарегистрироваться
