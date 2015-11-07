@@ -4,9 +4,6 @@ ru:
       title: Список тестовых заданий
       add: Добавить
       read_more: Читать подробнее
-      edit: Редактировать
-      delete: Удалить
-      delete_confirm: Вы точно хотите удалить?
     new:
       title: Добавить тестовое задание
     edit:
@@ -17,6 +14,10 @@ ru:
       success: Ваш пост удачно обновлен.
     destroy:
       success: Вы удалили ваш пост.
+    controls:
+      edit: Редактировать
+      delete: Удалить
+      delete_confirm: Вы точно хотите удалить?
   activerecord:
     errors:
       models:
