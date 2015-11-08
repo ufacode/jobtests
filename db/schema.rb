@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151108091046) do
+ActiveRecord::Schema.define(version: 20151108092313) do
 
   create_table "identities", force: :cascade do |t|
     t.string   "provider",   limit: 255
@@ -30,8 +30,10 @@ ActiveRecord::Schema.define(version: 20151108091046) do
     t.datetime "created_at",                null: false
     t.datetime "updated_at",                null: false
     t.integer  "user_id",     limit: 4
+    t.datetime "deleted_at"
   end
 
+  add_index "posts", ["deleted_at"], name: "index_posts_on_deleted_at", using: :btree
   add_index "posts", ["user_id"], name: "index_posts_on_user_id", using: :btree
 
   create_table "users", force: :cascade do |t|
