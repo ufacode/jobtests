@@ -18,6 +18,9 @@ gem 'rails-i18n', '~> 4.0.0' # i18n messages
 gem 'pundit'
 gem 'paranoia'
 
+gem 'mini_magick'
+gem 'carrierwave'
+
 gem 'devise'
 gem 'devise-bootstrap-views'
 gem 'font-awesome-sass', '~> 4.4.0'

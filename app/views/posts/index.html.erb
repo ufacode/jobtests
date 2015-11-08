@@ -27,7 +27,7 @@
         </ul>
       </div>
 
-      <%= image_tag 'img1-870x400.jpeg', class: 'img-responsive' %>
+      <%= image_tag post.image.url(:medium), class: 'img-responsive' %>
 
       <p><%= truncate post.description %></p>
 

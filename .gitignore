@@ -37,3 +37,4 @@ config/database.yml
 .idea
 .env.test
 .env.development
+public/uploads
