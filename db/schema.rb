@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151107094107) do
+ActiveRecord::Schema.define(version: 20151108091046) do
 
   create_table "identities", force: :cascade do |t|
     t.string   "provider",   limit: 255
@@ -29,7 +29,10 @@ ActiveRecord::Schema.define(version: 20151107094107) do
     t.text     "description", limit: 65535
     t.datetime "created_at",                null: false
     t.datetime "updated_at",                null: false
+    t.integer  "user_id",     limit: 4
   end
+
+  add_index "posts", ["user_id"], name: "index_posts_on_user_id", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "name",                   limit: 255, default: "", null: false
@@ -55,4 +58,5 @@ ActiveRecord::Schema.define(version: 20151107094107) do
   add_index "users", ["unlock_token"], name: "index_users_on_unlock_token", unique: true, using: :btree
 
   add_foreign_key "identities", "users"
+  add_foreign_key "posts", "users"
 end
