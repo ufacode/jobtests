@@ -1,0 +1,9 @@
+ru:
+  activerecord:
+    attributes:
+      user:
+        name: Имя
+        remember_me: Запомнить меня
+        password: Пароль
+        password_confirmation: Продублируйте пароля
+        avatar: Картинку аватара

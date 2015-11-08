@@ -32,6 +32,7 @@ ru:
       post:
         title: Заголовок
         description: Описание тестового задания
+        image: Изображение
   helpers:
     submit:
       post:

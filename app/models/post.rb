@@ -8,4 +8,6 @@ class Post < ActiveRecord::Base
   scope :newests, -> { order('created_at DESC') }
 
   acts_as_paranoid
+
+  mount_uploader :image, PostUploader
 end

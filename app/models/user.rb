@@ -8,6 +8,8 @@ class User < ActiveRecord::Base
 
   has_many :identities
 
+  mount_uploader :avatar, UserUploader
+
   def full_name
     name.present? ? name : email
   end
