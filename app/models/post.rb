@@ -6,4 +6,6 @@ class Post < ActiveRecord::Base
   delegate :full_name, to: :author, prefix: true, allow_nil: true
 
   scope :newests, -> { order('created_at DESC') }
+
+  acts_as_paranoid
 end
