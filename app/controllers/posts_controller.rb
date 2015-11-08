@@ -10,6 +10,7 @@ class PostsController < ApplicationController
   def edit; end
 
   def create
+    post.author = current_user
     if post.save
       redirect_to post_path(post), notice: t('.success')
     else

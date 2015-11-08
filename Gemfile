@@ -36,6 +36,7 @@ group :development do
   gem 'quiet_assets'
   gem 'sextant'
   gem 'bootstrap-generators', '~> 3.3.4'
+  gem 'rack-mini-profiler'
 end
 
 group :production do

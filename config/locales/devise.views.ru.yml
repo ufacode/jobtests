@@ -2,9 +2,10 @@ ru:
   helpers:
     label:
       user:
+        name: Имя
         remember_me: Запомнить меня
         password: Пароль
-        password_confirmation: Проверка пароля
+        password_confirmation: Продублируйте пароля
   devise:
     confirmations:
       new:
