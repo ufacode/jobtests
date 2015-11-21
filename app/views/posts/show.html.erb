@@ -9,7 +9,7 @@
         </li>
 
         <li>
-          <i class="icon-calendar"></i>September 20th, 2013
+          <i class="icon-calendar"></i><%= l post.created_at, format: :short %>
         </li>
 
         <li>
@@ -29,6 +29,8 @@
     <%= render 'controls', post: post %>
 
   </div>
+
+  <%= commontator_thread(post) %>
 
 </div>
 

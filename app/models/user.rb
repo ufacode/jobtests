@@ -10,6 +10,8 @@ class User < ActiveRecord::Base
 
   mount_uploader :avatar, UserUploader
 
+  acts_as_commontator
+
   def full_name
     name.present? ? name : email
   end

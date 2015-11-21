@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   resources :posts
   devise_for :users, controllers: { omniauth_callbacks: 'sessions' }
 
+  mount Commontator::Engine => '/commontator'
+
   # match '/auth/:provider/callback', to: 'sessions#create', via: [:get, :post]
   # devise_scope :users do
   #   match '/users/auth/:provider/callback', to: 'sessions#create', via: [:get, :post]
